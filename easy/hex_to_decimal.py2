@@ -1,0 +1,24 @@
+import sys
+test_cases = open(sys.argv[1], 'r')
+for test in test_cases:
+    test = test.rstrip()
+    answer = 0
+    for i in range(0,len(test)):
+        if test[i] == "a":
+            answer += 16 ** (len(test) - 1 - i) * 10
+        elif test[i] == "b":
+            answer += 16 ** (len(test) - 1 - i) * 11
+        elif test[i] == "c":
+            answer += 16 ** (len(test) - 1 - i) * 12
+        elif test[i] == "d":
+            answer += 16 ** (len(test) - 1 - i) * 13
+        elif test[i] == "e":
+            answer += 16 ** (len(test) - 1 - i) * 14
+        elif test[i] == "f":
+            answer += 16 ** (len(test) - 1 - i) * 15
+        else:
+            answer += 16 ** (len(test) - 1 - i) * int(test[i])
+
+    print answer
+
+test_cases.close()

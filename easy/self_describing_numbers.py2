@@ -1,0 +1,17 @@
+import sys
+test_cases = open(sys.argv[1], 'r')
+for test in test_cases:
+    printval = 1
+    arr = [0] * (len(test)-1)
+    for i in range(0,len(test)-1):
+        if int(test[i]) >= (len(test) - 1):
+            printval = 0
+        else:
+            arr[int(test[i])] += 1
+    for i in range(0,len(test)-1):
+        if arr[i] != int(test[i]):
+            printval = 0
+
+    print printval
+
+test_cases.close()

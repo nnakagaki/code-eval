@@ -1,0 +1,16 @@
+import sys
+test_cases = open(sys.argv[1], 'r')
+for test in test_cases:
+    test = test.rstrip().split(",")
+    n = int(test[0])
+    m = int(test[1])
+
+    while 1==1:
+        if n - m >= 0:
+            n = n - m
+        else:
+            break
+
+    print n
+
+test_cases.close()
